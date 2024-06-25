@@ -1,14 +1,9 @@
 import http from 'node:http'
+import loginRouter from './login/login.js'
 
 const router = [
   { path: '/', handle: async (ctx) => ctx.res.end('根目录') },
-  {
-    path: '/login',
-    handle: async (ctx) => {
-      console.log('query:' + ctx.query.name + ctx.query.age)
-      ctx.res.end(JSON.stringify({ sucess: true }))
-    },
-  },
+  loginRouter,
 ]
 
 function urlParser(originUrl) {
