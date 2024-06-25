@@ -1,0 +1,12 @@
+{
+  "name": "reviewnodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node src/path.js --port=3306"
+  },
+  "author": "",
+  "license": "ISC"
+}
