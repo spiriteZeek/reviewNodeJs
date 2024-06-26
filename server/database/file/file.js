@@ -32,17 +32,16 @@ function delFile(fileId) {
   fs.writeFileSync(database, JSON.stringify(file), { flag: 'w+' })
 }
 
-
 //改
 function editFile(fileId, filename) {
   const fileStr = fs.readFileSync(database, { flag: 'r+' })
   const file = JSON.parse(fileStr)
-  const fileIndex = file.findIndex(item => item.uid === fileId)
+  const fileIndex = file.findIndex((item) => item.uid === fileId)
   console.log(fileIndex)
   if (fileIndex > -1) {
     file[fileIndex].filename = filename
   }
-  fs.writeFileSync(database, JSON.stringify(file), { flag: 'w+'})
+  fs.writeFileSync(database, JSON.stringify(file), { flag: 'w+' })
 }
 console.log('start edit')
 editFile('1', 'zeek')
@@ -58,3 +57,5 @@ function getAllFiles() {
     items: files,
   }
 }
+
+export { getAllFiles, addFile, editFile, delFile }

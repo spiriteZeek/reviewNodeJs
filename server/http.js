@@ -1,9 +1,11 @@
 import http from 'node:http'
 import loginRouter from './login/login.js'
+import { listFile } from './router/http-file.js'
 
 const router = [
   { path: '/', handle: async (ctx) => ctx.res.end('根目录') },
   loginRouter,
+  listFile,
 ]
 
 function urlParser(originUrl) {
