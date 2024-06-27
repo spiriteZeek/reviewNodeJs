@@ -1,11 +1,13 @@
 import http from 'node:http'
 import loginRouter from './login/login.js'
-import { listFile } from './router/http-file.js'
+import { listFile, downloadFile, uploadFile } from './router/http-file.js'
 
 const router = [
   { path: '/', handle: async (ctx) => ctx.res.end('根目录') },
   loginRouter,
   listFile,
+  downloadFile,
+  uploadFile
 ]
 
 function urlParser(originUrl) {
@@ -34,7 +36,11 @@ const server = http.createServer(async (req, res) => {
   // 如何让不同的url+method组合，路由到不同的处理函数
 
   const { url, param } = urlParser(req.url)
-  res.setHeader('Content-type', 'text/plain;charset=utf-8') //解决服务端乱码
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Headers', 'token, content-type')
+  res.setHeader('Access-Control-Allow-Methods', 'PUT,POST,GET')
+
+  res.setHeader('Content-type', 'charset=utf-8') //解决服务端乱码
   const routerInstance = router.find((r) => r.path === url)
   console.log(req.url, req.method)
   const context = {

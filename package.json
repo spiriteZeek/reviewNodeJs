@@ -5,8 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node src/path.js --port=3306"
+    "test": "node src/path.js --port=3306",
+    "start": "node server/http.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^1.6.0"
+  }
 }

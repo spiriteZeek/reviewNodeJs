@@ -1,1 +1,18 @@
-[{"uid":"1","filename":"zeek","fileSize":"20k","fileUrl":"http://127.0.0.1:8080/test.txt","fileUpdateTime":"2023年9月10日"},{"uid":"2","filename":"测试2","fileSize":"20k","fileUrl":"http://127.0.0.1:8080/test.txt","fileUpdateTime":"2023年9月10日"},{"uid":"3","filename":"测试3","fileSize":"20k","fileUrl":"http://127.0.0.1:8080/test.txt","fileUpdateTime":"2023年9月10日"}]
+[
+  {
+    "uid": "oss-13e394f5ab79df4730a5a8b9d8785340",
+    "filename": "贾依婷(2021-2022-2)课表.pdf",
+    "fileType": "application/pdf",
+    "fileSize": "20k",
+    "fileUrl": "http://127.0.0.1:3000/download?file=oss-13e394f5ab79df4730a5a8b9d8785340",
+    "fileUpdateTime": "2024年5月3日"
+  },
+  {
+    "uid": "oss-7c5989625fe32a5dea4280243723c124",
+    "filename": "21国贸外贸运输与保险小组作业封面.doc",
+    "fileType": "application/msword",
+    "fileSize": "20k",
+    "fileUrl": "http://127.0.0.1:3000/download?file=oss-7c5989625fe32a5dea4280243723c124",
+    "fileUpdateTime": "2024年5月3日"
+  }
+]
